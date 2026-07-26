@@ -1,0 +1,59 @@
+<svg viewBox="0 0 1200 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="OpenToxic">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#060a06"/>
+      <stop offset="1" stop-color="#0d150d"/>
+    </linearGradient>
+
+    <radialGradient id="glow" cx="50%" cy="45%" r="60%">
+      <stop offset="0" stop-color="#39ff14" stop-opacity="0.35"/>
+      <stop offset="55%" stop-color="#39ff14" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#39ff14" stop-opacity="0"/>
+    </radialGradient>
+
+    <pattern id="hazard" width="28" height="28" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="28" height="28" fill="#0d150d"/>
+      <rect width="14" height="28" fill="#d4ff00"/>
+    </pattern>
+
+    <filter id="textGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="7" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="320" fill="url(#bg)"/>
+
+  <rect y="0" width="1200" height="10" fill="url(#hazard)"/>
+  <rect y="310" width="1200" height="10" fill="url(#hazard)"/>
+
+  <circle cx="600" cy="150" r="230" fill="url(#glow)"/>
+
+  <g opacity="0.5" stroke="#39ff14" stroke-width="1.4" fill="none">
+    <circle cx="600" cy="150" r="118"/>
+    <circle cx="600" cy="150" r="150"/>
+  </g>
+  <g opacity="0.35" fill="#39ff14">
+    <circle cx="600" cy="60" r="7"/>
+    <circle cx="519" cy="196" r="7"/>
+    <circle cx="681" cy="196" r="7"/>
+  </g>
+
+  <text x="600" y="150" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif"
+        font-size="86" font-weight="800" letter-spacing="6" fill="#c8ffb0" filter="url(#textGlow)">
+    OPENTOXIC
+  </text>
+
+  <text x="600" y="150" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif"
+        font-size="86" font-weight="800" letter-spacing="6" fill="#eaffe0">
+    OPENTOXIC
+  </text>
+
+  <text x="600" y="205" text-anchor="middle" font-family="Consolas, 'Courier New', monospace"
+        font-size="20" letter-spacing="3" fill="#9ad98a">
+    A LAB FOR IDEAS EVERYONE ELSE SAID NO TO
+  </text>
+</svg>
